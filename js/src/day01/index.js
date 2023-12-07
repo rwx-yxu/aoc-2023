@@ -12,19 +12,16 @@ const part1 = (rawInput) => {
       const charArr = [...line];
       const ints = charArr.filter((c)=> isInt(Number(c)))
       if (ints.length == 0){
-          return
+          return 'Null'
       }
       if (ints.length > 1){
           return ints[0]+ints[ints.length-1]
       }
       return ints[ints.length-1]+ints[ints.length-1]
   })
-  console.log(nums)
-  //filter to remove undefined
-  const cleanUndefined = nums.filter((n) => n !== undefined)
   
   //map convert to integers from string
-  const convertedToInts = cleanUndefined.map((e) => parseInt(e))
+  const convertedToInts = nums.map((e) => parseInt(e))
   
   // reduce to sum
   const sum = convertedToInts.reduce((partialSum, a) => partialSum + a, 0)
@@ -36,7 +33,6 @@ const part2 = (rawInput) => {
   const input = parseInput(rawInput)
   const numWords = ['one','two','three','four','five','six','seven','eight','nine']
   const numVal = ['1','2','3','4','5','6','7','8','9']
-  const includesInt = (line,word) => line.includes(word)
   const isInt = (char) => Number.isInteger(char)
   const position = (line,word) => line.indexOf(word)
   const inputArr = input.split("\n")
@@ -76,17 +72,15 @@ const part2 = (rawInput) => {
       const charArr = [...line];
       const ints = charArr.filter((c)=> isInt(Number(c)))
       if (ints.length == 0){
-          return
+          return 'null'
       }
       if (ints.length > 1){
           return ints[0]+ints[ints.length-1]
       }
       return ints[ints.length-1]+ints[ints.length-1]
   })
-  //filter to remove undefined
-  const cleanUndefined = nums.filter((n) => n !== undefined && n != '')
   //map convert to integers from string
-  const convertedToInts = cleanUndefined.map((e) => parseInt(e))
+  const convertedToInts = nums.map((e) => parseInt(e))
   
   // reduce
   const sum = convertedToInts.reduce((partialSum, a) => partialSum + a, 0)
