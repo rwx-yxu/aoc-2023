@@ -25,13 +25,13 @@
           "0",
           "1892"
         ],
-        "time": 1.552708
+        "time": 0.670959
       },
       "part2": {
-        "solved": false,
-        "result": null,
+        "solved": true,
+        "result": "63542",
         "attempts": [],
-        "time": null
+        "time": 0.578167
       }
     },
     {
